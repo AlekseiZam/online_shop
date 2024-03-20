@@ -30,12 +30,13 @@ class UserController extends Controller
                 $user = DB::table('users')->where('email', '=', $data->input('loginName'))->first();
                 $pass = $user->password;
                 $email = $user->email;
-                $id = $user->id;
+                $id = $user->access_id;
 
                 if(password_verify($data->input('loginPassword'), $pass)) {
                     session([
+                            'user_id' => $user->id,
                             'email' => $email,
-                            'id' => $id
+                            'id_access' => $id
                         ]);
                     return redirect()->route('main');
                 }

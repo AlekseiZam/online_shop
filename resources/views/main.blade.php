@@ -3,7 +3,6 @@
 @section('title')Главная@endsection
 
 @section('head')
-    <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
     <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
     <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
     <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
@@ -20,7 +19,7 @@
             <div class="col-md-8 col-sm-8 col-9 py-5 gx-5 text-center" style="background-color: #d7d7d7">
                 <div class="row gy-5">
                         <div class="ref col-xl-4 col-md-6">
-                            <a href="#">
+                            <a href="{{route('videocards')}}">
                                 <div class="img-fluid">
                                     <img src="{{URL('images/videocards.jpg')}}">
                                     <p style="color: black; margin-top: 10px;">Видеокарты</p>

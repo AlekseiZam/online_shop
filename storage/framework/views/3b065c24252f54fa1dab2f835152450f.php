@@ -2,9 +2,8 @@
 
 <?php $__env->startSection('html'); ?>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-3"></div>
-             <div class="col-6 gy-5">
+        <div class="row justify-content-center">
+             <div class="col-6 col-lg-3 gy-5">
                 <?php if($errors->any()): ?>
                     <div class="alert alert-danger gy-2">
                         <p>Ошибка регистрации</p>
@@ -101,12 +100,11 @@
                                 <input <?php if($errors->has('phone')): ?> style="color: #de2329;"  <?php endif; ?> type="number" id="phone" name="phone" class="form-control" value="<?php echo e(old('phone')); ?>" placeholder="8xxxxxxxx" required>
                             </div>
                             <!-- Submit button -->
-                            <button type="submit" class="btn btn-primary btn-block mb-3">Регистрация</button>
+                            <button type="submit" class="btn btn-primary btn-block mb-3">Зарегистрироваться</button>
                         </form>
                     </div>
                 </div>
             </div>
-            <div class="col-3"></div>
         </div>
     </div>
 <?php $__env->stopSection(); ?>

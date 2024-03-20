@@ -4,9 +4,8 @@
 
 @section('html')
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-3"></div>
-             <div class="col-6 gy-5">
+        <div class="row justify-content-center">
+             <div class="col-6 col-lg-3 gy-5">
                 @if ($errors->any())
                     <div class="alert alert-danger gy-2">
                         <p>Ошибка регистрации</p>
@@ -103,12 +102,11 @@
                                 <input @if ($errors->has('phone')) style="color: #de2329;"  @endif type="number" id="phone" name="phone" class="form-control" value="{{ old('phone') }}" placeholder="8xxxxxxxx" required>
                             </div>
                             <!-- Submit button -->
-                            <button type="submit" class="btn btn-primary btn-block mb-3">Регистрация</button>
+                            <button type="submit" class="btn btn-primary btn-block mb-3">Зарегистрироваться</button>
                         </form>
                     </div>
                 </div>
             </div>
-            <div class="col-3"></div>
         </div>
     </div>
 @endsection

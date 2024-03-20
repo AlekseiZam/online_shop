@@ -9,4 +9,5 @@ class Manufacturer extends Model
 {
     use HasFactory;
     protected $table = 'manufacturers';
+    protected $guarded = false;
 }

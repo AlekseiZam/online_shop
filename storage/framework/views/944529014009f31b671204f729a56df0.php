@@ -4,17 +4,25 @@
         <hr>
         <ul class="nav nav-pills flex-column">
             <li class="nav-item text-white">
-                <a href="#" class="nav-link active" aria-current="page">
+                <a href="<?php echo e(route('main')); ?>" class="nav-link text-white" aria-current="page">
                     Главная
                 </a>
             </li>
+            <?php if(session()->get('id_access') > 1): ?>
+                <li>
+                    <a href='<?php echo e(route('index')); ?>' class="nav-link text-white">
+                        Управление
+                    </a>
+                </li>
+            <?php endif; ?>
             <li>
-                <a href="#" class="nav-link text-white">
-                    Корзина
+                <a href="<?php echo e(route('toCart')); ?>" class="nav-link text-white">
+                    Корзина (<span class="cart_qty"><?php echo e(\Cart::session(session()->get('user_id'))->getTotalQuantity()); ?></span>)
                 </a>
+
             </li>
             <li>
-                <a href="#" class="nav-link text-white">
+                <a href="<?php echo e(route('order_list')); ?>" class="nav-link text-white">
                     Заказы
                 </a>
             </li>

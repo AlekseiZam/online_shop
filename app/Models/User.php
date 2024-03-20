@@ -8,5 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class User extends Model
 {
     use HasFactory;
+
     protected $table = 'users';
+    protected $guarded = false;
+
+    public function access()
+    {
+        return $this->belongsTo(Access::class);
+    }
 }

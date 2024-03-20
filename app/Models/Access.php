@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Access extends Model
 {
     use HasFactory;
+    protected $table = 'accesses';
+    protected $guarded = false;
 }
